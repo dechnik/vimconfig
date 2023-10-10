@@ -294,7 +294,7 @@
   };
 
   outputs = inputs@{ self, flake-utils, nixpkgs, nix2vim, coq-lsp, neovim, sg-nvim-src, codeium-nvim, ... }:
-    flake-utils.lib.eachDefaultSystem (system:
+    flake-utils.lib.eachSystem ["x86_64-linux" "aarch64-linux"] (system:
       let
         unappliedPkgs = (neovimArgs: import nixpkgs {
           inherit system;

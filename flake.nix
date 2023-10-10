@@ -308,8 +308,8 @@
                 codeium-lsp = codeium-nvim.packages.${system}.codeium-lsp;
                 coq-lsp = coq-lsp.packages.${system}.default;
                 nvim = neovim.packages.${system}.neovim;
-                sg = sg-nvim-src.packages.${prev.system}.default;
-                sg-nvim = sg-nvim-src.packages.${prev.system}.sg-nvim;
+                sg = sg-nvim-src.packages.${system}.default;
+                sg-nvim = sg-nvim-src.packages.${system}.sg-nvim;
                 # sg = sg-nvim-src.packages.${prev.system}.default.overrideAttrs (oldAttrs: {
                 #     buildInputs = oldAttrs.buildInputs ++ (if prev.stdenv.isDarwin then [ prev.darwin.apple_sdk.frameworks.Security ] else []);
                 # });
@@ -356,11 +356,12 @@
             }
         );
       in
-      {
+      rec {
         # The package built by `nix build .`
         defaultPackage = neovimConfig {
           makeOffline = false;
         };
+        hydraJobs = packages;
         # The app run by `nix run .`
         apps.defaultApp = {
           type = "app";

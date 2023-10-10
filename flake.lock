@@ -705,11 +705,11 @@
       },
       "locked": {
         "dir": "contrib",
-        "lastModified": 1696948615,
-        "narHash": "sha256-MLzk6OaAiAUjLURZNMSk1ZP1kfrVAWBbFRefp+1o2Lw=",
+        "lastModified": 1696958432,
+        "narHash": "sha256-yPhORnQjwEFGEswA5Y6bzF6iM0fgje1MLggyVDSz6Io=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "fd39f5ce8c9bbda1b77ff6c03553148fadac5d57",
+        "rev": "c3d21ad1bccd9a2975be73b1115213fd884eada3",
         "type": "github"
       },
       "original": {
@@ -1353,11 +1353,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1696957584,
-        "narHash": "sha256-dYW/RDJaUYdFZVnSnaUsu0jSMJdel8rknUIKWovxov8=",
+        "lastModified": 1696966957,
+        "narHash": "sha256-Me4Ms7NXIKU6OYU4kRZb2ebqz0u1INrTzwInx8V/zh0=",
         "owner": "sourcegraph",
         "repo": "sg.nvim",
-        "rev": "8986e1073a8f639bdfc14988e4efa0f496e45fc8",
+        "rev": "81e4150a296c5d375d78ef0be75c82ece0ae8651",
         "type": "github"
       },
       "original": {

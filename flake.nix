@@ -276,10 +276,10 @@
       flake = false;
     };
 
-    # sg-nvim-src = {
-    #   url = "github:sourcegraph/sg.nvim";
-    #   # inputs.pre-commit-nix.follows = "nixpkgs";
-    # };
+    sg-nvim-src = {
+      url = "github:sourcegraph/sg.nvim";
+      # inputs.pre-commit-nix.follows = "nixpkgs";
+    };
 
     nvim-github-linker-src = {
       url = "github:vincent178/nvim-github-linker";
@@ -293,7 +293,7 @@
 
   };
 
-  outputs = inputs@{ self, flake-utils, nixpkgs, nix2vim, coq-lsp, neovim, /* sg-nvim-src,*/ codeium-nvim, ... }:
+  outputs = inputs@{ self, flake-utils, nixpkgs, nix2vim, coq-lsp, neovim, sg-nvim-src, codeium-nvim, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         unappliedPkgs = (neovimArgs: import nixpkgs {
@@ -308,7 +308,8 @@
                 codeium-lsp = codeium-nvim.packages.${system}.codeium-lsp;
                 coq-lsp = coq-lsp.packages.${system}.default;
                 nvim = neovim.packages.${system}.neovim;
-                # sg = sg-nvim-src.packages.${prev.system}.default;
+                sg = sg-nvim-src.packages.${prev.system}.default;
+                sg-nvim = sg-nvim-src.packages.${prev.system}.sg-nvim;
                 # sg = sg-nvim-src.packages.${prev.system}.default.overrideAttrs (oldAttrs: {
                 #     buildInputs = oldAttrs.buildInputs ++ (if prev.stdenv.isDarwin then [ prev.darwin.apple_sdk.frameworks.Security ] else []);
                 # });
@@ -325,7 +326,7 @@
               withPython3 = true;
                   # --suffix PATH : ${pkgs.lib.makeBinPath [ pkgs.sg ]} --suffix LUA_CPATH : ';${pkgs.sg}/lib/libsg_nvim.dylib;${pkgs.sg}/lib/libsg_nvim.so;'
               extraMakeWrapperArgs = ''
-                  --suffix PATH : ${pkgs.lib.makeBinPath [ pkgs.coq-lsp ]}
+                  --suffix PATH : ${pkgs.lib.makeBinPath [ pkgs.coq-lsp ]} --suffix PATH : ${pkgs.lib.makeBinPath [ pkgs.sg ]} --suffix LUA_CPATH : ';${pkgs.sg}/lib/?.so;'
               '';
               imports = [
                 ./modules/essentials.nix
@@ -344,7 +345,7 @@
                 ./modules/trailblazer.nix
                 ./modules/github.nix
                 # ./modules/coq.nix
-                # ./modules/sg.nix
+                ./modules/sg.nix
 
                 # ./modules/leap.nix
                 # TODO uncomment when

@@ -1,11 +1,11 @@
 { pkgs, dsl, ... }:
 with dsl; {
-  # plugins = with pkgs; [
-  #   sg
-  # ];
+  plugins = with pkgs; [
+    sg-nvim
+  ];
 
-  # lua = ''
-  #         require("sg").setup {}
-  # '';
+  lua = ''
+    require("sg").setup {}
+  '';
 
 }

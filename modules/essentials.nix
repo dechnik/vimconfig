@@ -135,7 +135,7 @@ in
       "l" = [ "<cmd>Telescope resume<CR>" "last telescope query" ];
 
       "gf" = [
-        "<cmd>lua require('telescope.builtins').live_grep {default_text='function'}<CR>"
+        "<cmd>lua require('telescope.builtin').live_grep {default_text='function'}<CR>"
         "grep for functions only"
       ];
       "hs" = [ "<cmd>Gitsigns preview_hunk<CR>" "preview hunk" ];

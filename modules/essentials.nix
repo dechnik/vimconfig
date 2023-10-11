@@ -113,7 +113,7 @@ in
       "fa" = [ "<cmd>Telescope harpoon marks<cr>" "Get harpoon marks list" ];
       "gg" = [ "<cmd>Telescope live_grep<cr>" "Fzf fuzzy search" ];
       "['<leader>']" = [ "<cmd>Telescope find_files<cr>" "search files" ];
-      "n"  = ["<cmd>lua require(\"sg.telescope\").fuzzy_search_results()<CR>" "sourcegraph search"];
+      "n"  = ["<cmd>lua require(\"sg.extensions.telescope\").fuzzy_search_results()<CR>" "sourcegraph search"];
 
       "ws" = [ "<cmd>sp<cr>" "Split window horizontally" ];
       "wv" = [ "<cmd>vs<cr>" "Split window vertically" ];

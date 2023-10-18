@@ -290,6 +290,7 @@ setupCodeium
       # { name = "codeium"; }
       { name = "nvim_lsp"; }
       { name = "vsnip"; }
+      { name = "path"; }
       { name = "buffer"; }
       { name = "crates"; }
     ];

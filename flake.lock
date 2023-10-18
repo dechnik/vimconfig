@@ -1353,11 +1353,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1696969053,
-        "narHash": "sha256-64Uo6CcvqMHll2uoG7d10yKyS6PqwCXY+iHc9a70Qms=",
+        "lastModified": 1697548943,
+        "narHash": "sha256-08rF2bOziT6VgZoJ2/3XuD1TY46DT5tKl5zlZ18W6v8=",
         "owner": "sourcegraph",
         "repo": "sg.nvim",
-        "rev": "acdc88fb410762828797e8816fa790b96b71bb97",
+        "rev": "7956fd3cf13485c0af59264f74787ecf8b47cb37",
         "type": "github"
       },
       "original": {

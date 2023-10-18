@@ -21,6 +21,7 @@ setupCodeium
     nvim-cmp
     vimPlugins.cmp-vsnip
     cmp-buffer
+    cmp-path
     # lsp things
     vimPlugins.lsp_signature-nvim
     vimPlugins.lspkind-nvim

@@ -82,6 +82,10 @@
       url = "github:hrsh7th/cmp-buffer";
       flake = false;
     };
+    cmp-path = {
+      url = "github:hrsh7th/cmp-path";
+      flake = false;
+    };
     comment-nvim-src = {
       url = "github:numToStr/Comment.nvim";
       flake = false;

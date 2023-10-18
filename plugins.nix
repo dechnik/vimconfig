@@ -85,6 +85,7 @@ with inputs; {
 
   telescope-nvim = (withSrc prev.vimPlugins.telescope-nvim inputs.telescope-src);
   cmp-buffer = (withSrc prev.vimPlugins.cmp-buffer inputs.cmp-buffer);
+  cmp-path = (withSrc prev.vimPlugins.cmp-path inputs.cmp-path);
   nvim-cmp = (withSrc prev.vimPlugins.nvim-cmp inputs.nvim-cmp);
 
   cmp-nvim-lsp = withSrc prev.vimPlugins.cmp-nvim-lsp inputs.cmp-nvim-lsp;

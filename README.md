@@ -5,7 +5,7 @@ My personal vim config, assembled with `Nix`, and using vim2nix.
 # Usage
 
 ```
-nix run github:DieracDelta/vimconfig
+nix run github:dechnik/vimconfig
 ```
 
 # What's enabled
@@ -29,6 +29,4 @@ A bunch of common stuff:
 - Which-key for keys
 - Copilot, Codeium, and Chatgpt for AI driven development
 - Parinfer for lisp
-- Cornelus for agda
-- ltex + ngram for grammarly-esque support
 - random lsps that are useful
